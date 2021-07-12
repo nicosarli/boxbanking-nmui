@@ -1,0 +1,282 @@
+.contenedor {
+    height:auto;
+    display:flex;
+    box-shadow: .5px .5px 3px .1px gray;
+    margin: 0 2.3em;
+    padding: 2em 0 0em;
+    background-color: var(--pricingComponentBackground);
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 20%);
+    left: 0%;
+    right: 0%;
+}
+
+.contenedor .pageviews {
+    font-weight: 800;   
+    letter-spacing: 0.1em;
+    font-size: 0.7em;
+}
+
+.contenedor .precio {
+    margin: 1em 0 2em 0;
+}
+
+.contenedor .modoPaga {
+    margin: 1em 0 2em 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.modoPaga span {
+    color: var(--discountText);
+    background: var(--discountBackground);
+    border-radius: 2em;
+    padding: 0em 0.6em;
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.label {
+    display: inline-block;
+    background-color: rgb(208,216,239);
+    border-radius: 10em;
+    width: 3.3em;
+    height: 1.7em;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.label::after {
+    content:'';
+    display: block;
+    background-color: white;
+    width: 1em;
+    height: 1em;
+    border-radius: 10em;
+    position: absolute;
+    top: 0.35em;
+    left: 0.2em;
+    transition: .3s;
+}
+
+#switch:checked + .label::after {
+    left: 2.1em;
+}
+
+#switch:checked + .label {
+    background-color: var(--sliderBackground);
+}
+
+#switch {
+    display: none;
+}
+
+.u-botones-modoPaga {
+    font-size: .8em;
+    letter-spacing: 0;
+    padding: 0 1em
+}
+
+.beneficios {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+
+.beneficios ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.75em;
+}
+
+.beneficios li {
+    font-size: 0.7em;
+}
+
+.beneficios ul img {
+    padding: 0em 0.8em;
+}
+
+.beneficios ul:first-child {
+    border-top: 1px solid var(--toggleBackground)
+}
+
+.beneficios li:first-child {
+    margin-top: 1.8em;
+}
+
+.beneficios .botonBeneficios {
+    margin: 2em 0;
+    padding: 1em 2.5em;
+    border-radius: 10em;
+    font-size: 0.8em;
+    text-align: center;
+    background: var(--textYCtaBackground);
+    color: var(--ctaText);
+    width: 30%;
+    justify-content: center;
+}
+
+.slider-container {
+    margin: 2em;
+    width: 80%;
+    height: 0.5em;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(236,240,252) 60%, rgb(236,240,252) 60%);
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 10em;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 10em;
+    background: url("../images/icon-slider.svg") center no-repeat;
+    background-color: rgb(17,216,196);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    appearance: none;
+    width: 2em;
+    height: 2em;
+    border-radius: 10em;
+    background-color: rgb(17,216,196);
+    cursor: pointer;
+}
+
+.contenedor .contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monto {
+    font-size: 2em;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+}
+
+.monto span {
+    font-size: 1.3em;
+}
+
+.monto .mouth {
+    font-size: 0.4em;
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+@media screen and (min-width: 1024px) {
+    .hero .contenido h1 {
+        font-size: 2em;
+        padding-top: 2em;
+        padding-bottom: 0.2em;
+    }
+
+    .contenedor {
+        width: 500px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contenedor .contenido {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .contenedor .contenido .pageviews{
+        order: 0;
+        width: 50%;
+        padding-left: 2.5em
+    }
+
+    .contenedor .contenido .monto {
+        padding-right: 0.6em;
+        font-size: 2.3em;
+    }
+
+    .contenedor .contenido .slider-container {
+        order: 2;
+        width: 100%;
+    }
+
+    .contenedor .modoPaga {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .contenedor .modoPaga span::after {
+        content: " discount";
+    }
+
+    .contenedor .beneficios {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .contenedor .beneficios ul {
+        align-items: flex-start;
+        border: none;
+        width: 50%;
+    }
+
+    .contenedor .beneficios .botonBeneficios {
+        width: 40%;
+        text-align: center;
+    }
+
+    .contenedor .separador{
+        border-top: 1px solid var(--toggleBackground);
+        padding-bottom: 1em;
+        width: 100%;
+    }
+
+    .beneficios li:first-child{
+        border: none;
+        margin-top: 0;
+    }
+    
+    .beneficios li {
+        width: 100%;
+    }
+
+    .contenedor .beneficios .botonBeneficios {
+        width: 30%;
+        
+    }
+}

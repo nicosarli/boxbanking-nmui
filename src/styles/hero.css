@@ -1,0 +1,47 @@
+.hero {
+    text-align: center;
+    background: url(../images/bg-pattern.svg) no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 3em;
+    padding-bottom: 30vh;
+    position: relative;
+}
+
+.fondoTittle img {
+    width: 9.5em;
+    height: 9em;
+}
+
+.fondoTittle {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    right: 15%;
+}
+
+.hero h1 {
+    padding: 2em 2em 0.5em 2em;
+    font-weight: 900;
+    font-size: 1.35em;
+    color: var(--textYCtaBackground);
+}
+
+.hero p {
+    padding: 0 5.5em;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: var(--text);
+}
+
+@media screen and (min-width: 1024px) {
+    .fondoTittle img{
+        width: 11em;
+        height: 10.5em;
+    }
+
+    .fondoTittle {
+        top: 7%;
+        left: 6.5%;
+        right: 6.5%;
+    }
+}
