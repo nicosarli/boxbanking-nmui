@@ -1,6 +1,7 @@
 import Slider from "./Slider";
 import Beneficios from "./Beneficios";
-import Switch from "./Switch";
+import ModoPaga from "./ModoPaga";
+import Separador from "./Separador";
 
 const Box = () => {
   return (
@@ -9,14 +10,8 @@ const Box = () => {
         <div className="u-card pageviews">100K PAGEVIEWS</div>
         <Slider />
       </div>
-      <div className="u-card modoPaga">
-        <div className="u-botones-modoPaga left">Monthly Billing</div>
-        <Switch />
-        <div className="u-botones-modoPaga right">
-          Yearly Billing <span className="">-25%</span>
-        </div>
-      </div>
-      <div className="separador"></div>
+      <ModoPaga />
+      <Separador />
       <Beneficios />
     </div>
   );
